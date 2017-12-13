@@ -1,0 +1,64 @@
+
+<center>
+    <div ng-if="rests.length == 0 || rests == false" style="margin-top: 50px;">
+        <span class="notFound">Cannot found Results, Please Try Again</span>
+    </div>
+
+    <div ng-repeat="rest in rests track by $index">
+        <div id="restContainer">
+
+            <div id="googleMap"> <ng-map zoom="11" center={{rest.coordinates}}>
+                <marker position={{rest.coordinates}} />
+                <shape name="circle" radius="400" center={{coordinates}} radius="4000" />
+                <control name="overviewMap" opened="true" />
+            </ng-map>`
+            </div>
+
+            <div class="form-group restDes"> Name   
+                <input ng-model="rest.name" type="text" class="form-control" readonly>
+            </div>
+
+            <div class="form-group restDes">Price   
+                <input ng-model="rest.price" type="text" class="form-control" readonly>
+            </div>
+
+            <div class="form-group restDes">
+                <u>More Info:</u> {{ rest.city + ", " + rest.street  + " " + rest.houseNumber + " street" }}
+                <br>
+                <u>Website:</u> <a ng-href="{{rest.website}}">Click here</a> <br>
+                <u>Types:</u>&nbsp;&nbsp;<span ng-repeat="rest in  rest.restTypes track by $index ">{{ rest["name"] + ", " }}</span>  <br>
+                <u>Offers:</u>  &nbsp;&nbsp;<span ng-repeat="rest in  rest.restOffers track by $index ">{{ rest["name"] + ", " }}</span>
+            </div>
+        </div>
+    </div>
+</center>
+
+<script>
+    console.log("mapFunc");
+    function initMap(){
+        console.log("mapFunc222");
+        var map = new google.maps.Map(document.getElementById("googleMap"), {
+            zoom: 8,
+            center: {lat: -34.397, lng: 150.644}
+        });
+        var geocoder = new google.maps.Geocoder();
+        geocodeAddress(geocoder, map);
+    }
+
+    function geocodeAddress(geocoder, resultsMap) {
+        var address = 'Rishon Lezion';
+
+        geocoder.geocode({'address': address}, function(results, status) {
+            if (status === google.maps.GeocoderStatus.OK) {
+                resultsMap.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker({
+                    map: resultsMap,
+                    position: results[0].geometry.location
+                });
+            } else {
+                alert('Geocode was not successful for the following reason: ' + status);
+            }
+        });
+    }
+</script>
+</center>

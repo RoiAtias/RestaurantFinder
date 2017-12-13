@@ -1,0 +1,61 @@
+<div class="grid_10 omega">
+    <div style="background:#f1f1f1; height:100%;margin-top: -7px;">
+			<span style="display:block;padding-top:6px;">
+				<div style="background:#dddddd;">
+                    <div id='status' style='width:50px;'>#</div>
+                    <div id='detailsTitle' style="text-align:left;">Edit Selected Rest</div>
+                </div>
+				<div id='border'></div>
+                <div style="height: 700px;">
+                    <form name="createRest" ng-controller="adminMenuCtrl" ng-submit="SaveEditRest()" >
+                        <div class="form-group">
+                            <b style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rest Name:</b>
+                            <input ng-model="newRestName" type="text" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <b style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rest City:</b>
+                            <input ng-model="newRestCity" type="text" class="form-control" id="pwd">
+                        </div>
+                        <div class="form-group">
+                            <b style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rest Street:</b>
+                            <input ng-model="newRestStreet" type="text" class="form-control" id="pwd">
+                        </div>
+                        <div class="form-group">
+                            <b style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rest House Number:</b>
+                            <input ng-model="newRestHouseNum" type="text" class="form-control" id="pwd">
+                        </div>
+                        <div class="form-group">
+                            <b style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rest Price:</b>
+                            <input ng-model="newRestPrice" type="text" class="form-control" id="pwd">
+                        </div>
+                        <div class="form-group">
+                            <b style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rest WebSite:</b>
+                            <input ng-model="newRestWebsite" type="text" class="form-control" id="pwd">
+                        </div>
+                        <b style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Offers:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>
+                        <label class="checkbox-inline"><input ng-model="Kosher"             type="checkbox" value="">Kosher</label>
+                        <label class="checkbox-inline"><input ng-model="Badatz"             type="checkbox" value="">Badatz</label>
+                        <label class="checkbox-inline"><input ng-model="FreeParking"        type="checkbox" value="">Free Parking</label>
+                        <label class="checkbox-inline"><input ng-model="paymentParking"     type="checkbox" value="">Payment Parking</label>
+                        <label class="checkbox-inline"><input ng-model="SmokingArea"        type="checkbox" value="">Smoking area</label>
+                        <label class="checkbox-inline"><input ng-model="OpenSaturday"       type="checkbox" value="">Open Saturday</label>
+                        <label class="checkbox-inline"><input ng-model="Events"             type="checkbox" value="">Events</label>
+                        </br></br></br></br></br>
+                        <b style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Types :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>
+                        <label class="checkbox-inline"><input ng-model="Asian"      type="checkbox" value="">Asian</label>
+                        <label class="checkbox-inline"><input ng-model="Coffee"     type="checkbox" value="">Coffee</label>
+                        <label class="checkbox-inline"><input ng-model="Pizzeria"   type="checkbox" value="">Pizzeria</label>
+                        <label class="checkbox-inline"><input ng-model="Italian"    type="checkbox" value="">Italian</label>
+                        <label class="checkbox-inline"><input ng-model="Brunch"     type="checkbox" value="">Brunch</label>
+                        <label class="checkbox-inline"><input ng-model="Burger"     type="checkbox" value="">Burger</label>
+                        <label class="checkbox-inline"><input ng-model="Japanese"   type="checkbox" value="">Japanese</label>
+                        <label class="checkbox-inline"><input ng-model="Fish"       type="checkbox" value="">Fish</label>
+                        </br></br></br></br></br></br></br></br></br>
+                        <center>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </center>
+                    </form>
+                </div>
+            </span>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="grid_10 omega">
+    <div style="background:#f1f1f1; height:100%;margin-top: -7px;">
+			<span style="display:block;padding-top:6px;">
+				<div style="background:#dddddd;">
+                    <div id='status' style='width:50px;'>#</div>
+                    <div id='detailsTitle' style="text-align:left;">Create New Rest</div>
+                </div>
+				<div id='border'></div>
+                <div style="height: 700px;">
+                    <form name="createRest" ng-controller="adminMenuCtrl" ng-submit="addRest()" >
+                        <div class="form-group">
+                            <b style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rest Name:</b>
+                            <input ng-model="restName" type="text" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <b style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rest City:</b>
+                            <input ng-model="restCity" type="text" class="form-control" id="pwd">
+                        </div>
+                        <div class="form-group">
+                            <b style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rest Street:</b>
+                            <input ng-model="restSteert" type="text" class="form-control" id="pwd">
+                        </div>
+                        <div class="form-group">
+                            <b style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rest House Number:</b>
+                            <input ng-model="restHouseNum" type="text" class="form-control" id="pwd">
+                        </div>
+
+                        <div class="form-group">
+                            <b style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Coordinates on Map:</b>
+                            <input ng-model="restLocation" type="text" class="form-control" id="pwd"> Example: please enter: [30.000, 41,000]
+                        </div>
+
+                        <div class="form-group">
+                            <b style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Average Price:</b>
+                            <input ng-model="restPrice" type="text" class="form-control" id="pwd">
+                        </div>
+                        <div class="form-group">
+                            <b style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  WebSite:</b>
+                            <input ng-model="restWebsite" type="text" class="form-control" id="pwd">
+                        </div>
+
+                        <b style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Offers:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>
+                        <div ng-repeat="offer in restsOffers track by $index" style="display:inline-block"></br>
+                            <label class="checkbox-inline"><input ng-model="models[$index]" type="checkbox" value="">{{offer.name}}</label>
+                        </div>
+                        </br></br></br></br></br>
+                        <b style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Types:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>
+                        <div ng-repeat="type in restTypes track by $index" style="display:inline-block"></br>
+                            <label class="checkbox-inline"><input ng-model="courseModels[$index]" type="checkbox" value="">{{type.name}}</label>
+                        </div>
+                        </br></br></br></br></br></br></br></br></br>
+                        <center>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                         </center>
+                    </form>
+                </div>
+            </span>
+    </div>
+</div>

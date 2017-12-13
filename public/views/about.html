@@ -1,0 +1,94 @@
+<div class="aboutDiv">
+
+    <br>
+    <section style="margin-left: 50px; margin-top: 20px;">
+        <center><h1> Welcome to Restaurant Finder</h1>
+        <br>
+        Our website will help you to find the restaurant you looking for :)
+        <br>
+        here you can find restaurant from all part of Israel</center>
+        <br><br>
+        <center>
+            <video style="width: 70%;" controls autoplay>
+                <source src="./videos/restaurantFinder.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </center>
+        <br>
+        <br>
+        <div class="col-lg-12 text-center">
+            <h2 class="text-muted" style="color:#0f0f0f; font-size: 30px"> Our Amazing Team</h2>
+        </div>
+        <div class="col-sm-6 col-lg-6 col-md-6">
+            <div class="team-member">
+                <div class="card-container">
+                    <div class="card">
+                        <div class="side"><img src="./images/sh.jpg" width="389" height="367" class="img-responsive img-circle" alt=""></div>
+                        <div class="side back">
+                            Shirel Ashkenazi<br />
+                            Lead Developer<br />
+                            shirel.as@gmail.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-6 col-md-6">
+            <div class="team-member">
+                <div class="card-container">
+                    <div class="card">
+                        <div class="side"><img src="./images/Roi.jpg" width="389" height="367" class="img-responsive img-circle" align="right"></div>
+                        <div class="side back">
+                            Roi Atias <br />
+                            Lead Developer<br />
+                            roiat4@gmail.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <aside>
+
+        <br>
+        <marquee behavior="scroll" direction="down" width="300" height="600" >
+            <img src="./images/logoRest/raphael.png" width="200" height="100"/>
+            <img src="./images/logoRest/alG.jpg" width="200" height="100"/>
+            <img src="./images/logoRest/fish.jpg" width="200" height="100"/>
+            <img src="./images/logoRest/hdH.png" width="200" height="100"/>
+            <img src="./images/logoRest/jap.jpg" width="200" height="100"/>
+            <img src="./images/logoRest/moses.png" width="200" height="100"/>
+            <img src="./images/logoRest/nafis.jpg" width="200" height="100"/>
+            <img src="./images/logoRest/pizzaH.jpg" width="200" height="100"/>
+            <img src="./images/logoRest/segavEx.png" width="200" height="100"/>
+            <img src="./images/logoRest/soho.jpg" width="200" height="100"/>
+            <img src="./images/logoRest/tarnegol.jpg" width="200" height="100"/>
+        </marquee>
+
+
+    </aside>
+
+    <br> <br>
+    <br>
+    <canvas id="myCanvas" width="700" height="100" style="border:3px solid #f5e79e;">
+            Your browser does not support the HTML5 canvas tag.</canvas>
+
+
+</div>
+
+
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx=canvas.getContext("2d");
+    ctx.font="20px Comic Sans MS";
+    ctx.fillStyle = "black";
+    ctx.textAlign = "center";
+    ctx.fillText("RestaurantSearcher@gmail.com", canvas.width/2, canvas.height/2);
+</script>
+
+
+
+

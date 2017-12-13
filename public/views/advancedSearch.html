@@ -1,0 +1,43 @@
+
+<div class="main">
+    <div class="searchBox">
+        <span style="font-size: 20px; text-align: center; padding-left: 150px; color: #FFFFFF;"> Search Your Restaurant </span>
+        <form class="form-inline advancedSearchForm" name='advenceSearch'  ng-submit="searchRest()">
+            <div class="form-group advancedSearchInputs">
+                <span style="font-size:18px; font-weight: bold; width:400px; margin-right: 10px; margin-left: 10px;"></span>
+                <input ng-model="name" type="text" class="form-control" placeholder="Enter Restaurant Name" name="restName"
+                       style="width:390px;">
+            </div>
+            <center>
+            <br>
+                <button type="button" class="btn btn-default">advanced Search</button>
+            </center>
+            <div id="panel">
+                <div class="form-group advancedSearchInput">
+                    <span style="font-size:18px; font-weight: bold; width:400px; margin-right: 10px; margin-left: 10px;"></span>
+                    <input ng-model="city" type="text" class="form-control" placeholder="Enter Restaurant City " name="restCity"
+                           style="width:390px;">
+                </div>
+                <br><br>
+                <div class="form-group advancedSearchInput">
+                    <span style="font-size:18px; font-weight: bold; width:400px; margin-right: 10px; margin-left: 10px;"></span>
+                    <input ng-model="type" type="text" class="form-control" placeholder="Enter Restaurant Type" name="restType"
+                           style="width:390px;">
+                </div>
+            </div>
+            <center>
+                <input type="submit" value="Search" class="btn btn-warning" style="width:450px;margin-top: 35px;height: 30px; margin-right: 10px; margin-left: 10px; " />
+            </center>
+        </form>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#panel").slideToggle("slow");
+        });
+    });
+</script>
+
+<footer ng-include="'./views/footer.html'"></footer>
